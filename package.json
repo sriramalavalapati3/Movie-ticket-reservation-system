@@ -1,0 +1,36 @@
+{
+  "name": "flurn_assignment",
+  "version": "1.0.0",
+  "description": "\"This is a ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon src/app.js",
+    "start":"node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sriramalavalapati3/Flurn_assignment.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "expressjs",
+    "mysql",
+    "sequelize",
+    "Docker"
+  ],
+  "author": "A.Deva Sriram",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sriramalavalapati3/Flurn_assignment/issues"
+  },
+  "homepage": "https://github.com/sriramalavalapati3/Flurn_assignment#readme",
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "express": "^4.18.2",
+    "mysql2": "^3.3.5",
+    "nodemon": "^2.0.22",
+    "sequelize": "^6.32.0",
+    "sequelize-cli": "^6.6.1"
+  }
+}
