@@ -8,14 +8,13 @@ This is a Booking Service which allows you to choose seats and book
 ``MySql , Express.js , Nodejs , Sequilze , Sequilize-cli ``
 
 # Steps to set up this application in ur Docker 
+1. `git pull (github url)`
+   Open the file in terminal.
 
-``1. git pull (github url) ,
- open the file in terminal 
-2.Update the Mysql credentials  in config/config.json in development only  
-3. use command  : docker-compose up --build
-4. it will create docker create docker-image and it will run automatically
-5. If u stoped the application and again u want use the application u can use this command
-6.  docker run -p 3000:3000``
+2. Update the MySQL credentials in `config/config.json` (in development only).
+
+3. Use the command:
+
 # challenges faced 
 
 ``New to Docker , facing chanllenges while connecting local Mysql server with Docker 
