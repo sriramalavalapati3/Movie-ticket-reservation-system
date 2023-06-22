@@ -10,7 +10,7 @@ This is a Booking Service which allows you to choose seats and book
 # Steps to set up this application in ur Docker 
 
 ``
-1. git pull (github url)
+1. git pull (github url) \n
 2.open the file in terminal 
 3. use command  : docker-compose up --build
 4. it will create docker create docker-image and it will run automatically
