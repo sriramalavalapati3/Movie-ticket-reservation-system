@@ -23,15 +23,23 @@ This is a Booking Service which allows you to choose seats and book
 
 `docker run -p 3000:3000`
 
+6. Export .csv data to Mysql databases 
+
+7. Your Set to go  
+
 # challenges faced 
 
-``New to Docker , facing chanllenges while connecting local Mysql server with Docker 
-Exporting csv file into Mysql and creating Schema for the Tables 
-``
+--> New to Docker 
+
+--> facing chanllenges while connecting local Mysql server with Docker 
+
+--> Exporting csv file into Mysql and creating Schema for the Tables. 
+
 # What i have learned 
 
-``
-Usage of Docker ,
-More Clarity on Creating Mysql data base
-``
+
+1.Usage of Docker 
+
+2.More Clarity on Creating Mysql data base
+
 
