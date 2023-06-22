@@ -13,19 +13,21 @@ This is a Booking Service which allows you to choose seats and book
 
 2. Update the MySQL credentials in `config/config.json` (in development only).
 
-3. Use the command:
+3.start local Mysql Server ,Create a data base using this command  `CREATE DATABASE bookingservice`
+
+4. Use the command: 
 
 `docker-compose up --build`
 
-4. It will create a Docker image and run it automatically.
+5. It will create a Docker image and run it automatically.
 
-5. If you stop the application and want to use it again, you can use this command:
+6. If you stop the application and want to use it again, you can use this command:
 
 `docker run -p 3000:3000`
 
-6. Export .csv data to Mysql databases 
+7. Export .csv data to Mysql databases 
 
-7. Your Set to go  
+8. Your Set to go  
 
 # challenges faced 
 
