@@ -5,5 +5,5 @@ This is a Booking Service which allows you to choose seats and book
 [Routes](https://documenter.getpostman.com/view/24325307/2s93z5A5Sv)
 
 # Tech Stack used 
-MySql , Express.js , Nodejs , Sequilze , Sequilize-cli 
+``MySql , Express.js , Nodejs , Sequilze , Sequilize-cli ``
 
