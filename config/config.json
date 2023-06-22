@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "use your username of mysql",
-    "password": "use your username of mysql",
+    "username": "root",
+    "password": "root",
     "database": "Bookingservice",
     "host": "host.docker.internal",
     "dialect": "mysql"

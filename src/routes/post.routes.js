@@ -2,65 +2,63 @@ const express=require("express");
 const postRouter=express.Router();
 const {seats,seatpricing,bookings}=require("../../models/index")
 
-postRouter.post("/booking",async(req,res)=>{
+postRouter.post("/booking", async (req, res) => {
     try {
-        // destructuring data from req.body which is coming from client;
-        //As per my knowledge mysql cant store arrays in table 
-        //as we know we getting data in json format for array of seatids for that iam parsing it
-
-        let {Seats,name,mobile,amount,email}=req.body;
-         Seats=JSON.parse(Seats);
-         amount=JSON.parse(amount);
-         //checking weather any empty details are there  or not. 
-
-         if(Seats.length==0||name==""||mobile=="")
-         {
-            res.send("please select all details")
-         }
-      
-         // getting the details of seats in an array
-
-        let data=await seats.findAll({where:{id:[...Seats]}})
-        let bookedseats=[]
-
-        //checking wheather any seats are booked or not ,if booked we are sending response
-
-        for(let i=0;i<data.length;i++)
-        {
-            if(data[i].is_booked==true)
-            {
-                bookedseats.push(data[i].id)
-            }
+      // Destructuring data from req.body which is coming from the client
+      // As per my knowledge, MySQL can't store arrays in a table
+      // Since we are receiving data in JSON format for the array of seatids, we are parsing it
+      let { Seats, name, mobile, amount, email } = req.body;
+      Seats = JSON.parse(Seats);
+      amount = JSON.parse(amount);
+  
+      // Checking whether any empty details are there or not
+      if (Seats.length === 0 || name === "" || mobile === "") {
+        return res.status(400).json({ error: "Please select all details." });
+      }
+  
+      // Getting the details of seats in an array
+      let data = await seats.findAll({ where: { id: [...Seats] } });
+      let bookedSeats = [];
+  
+      // Checking whether any seats are already booked or not, if booked, adding them to the bookedSeats array
+      for (let i = 0; i < data.length; i++) {
+        if (data[i].is_booked === true) {
+          bookedSeats.push(data[i].id);
         }
-
-        // By putting condition wheather empty or not we are sending the response 
-
-        if(bookedseats.length>0)
-        {
-            res.send(`${bookedseats} these seats are booked already please select another`)
-        }
-        
-        // updating the seats table 
-
-        let booking= await seats.update({is_booked:true},{where:{id:[...Seats]}})
-
-        //Iam taking amount in the array as per the user selection which is coming from client 
-        //amount is calculated by using array.reduce()
-
-        const sum = amount.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-        
-        //updated the bookings table
-
-        let Data=await bookings.create({
-           seatid:`${Seats}`,name,mobile,Amount:sum,email
-        })
-
-        // send the resposnse 
-        res.json(Data)
-
+      }
+  
+      // Checking if any seats are already booked, if so, sending an appropriate error response
+      if (bookedSeats.length > 0) {
+        return res.status(400).json({
+          error: `${bookedSeats} Seats are already booked. Please select another.`,
+        });
+      }
+  
+      // Updating the seats table to mark the selected seats as booked
+      await seats.update({ is_booked: true }, { where: { id: [...Seats] } });
+  
+      // Calculating the total amount by using array.reduce()
+      const sum = amount.reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+        0
+      );
+  
+      // Creating a new booking entry in the bookings table
+      let createdBooking = await bookings.create({
+        seatid: JSON.stringify(Seats), // Storing the seatid as a JSON string in the bookings table
+        name,
+        mobile,
+        Amount: sum,
+        email,
+      });
+  
+      // Sending the created booking as a JSON response
+      res.json(createdBooking);
     } catch (error) {
-        res.send(error.message)
+      // Handling any errors that occur and sending an appropriate error response
+      res.status(500).json({ error: error.message });
     }
-})
+  });
+  
 
 module.exports={postRouter}

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon src/app.js",
-    "start":"node src/app.js"
+    "start": "node src/app.js"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
     "mysql2": "^3.3.5",
     "nodemon": "^2.0.22",
     "sequelize": "^6.32.0",
-    "sequelize-cli": "^6.6.1"
+    "sequelize-cli": "^6.6.1",
+    "twilio": "^4.12.0"
   }
 }

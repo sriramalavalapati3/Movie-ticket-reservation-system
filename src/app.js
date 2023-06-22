@@ -16,10 +16,12 @@ app.get("/",async(req,res)=>{
     }
 })
 
-
+app.use((req,res)=>{
+    res.status(404).send(error.message)
+})
 
 db.sequelize.sync().then(() => {
-    app.listen(8080, () => {
+    app.listen(3000, () => {
       console.log("Second Server Started");
     });
   });
