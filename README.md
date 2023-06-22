@@ -15,6 +15,14 @@ This is a Booking Service which allows you to choose seats and book
 
 3. Use the command:
 
+`docker-compose up --build`
+
+4. It will create a Docker image and run it automatically.
+
+5. If you stop the application and want to use it again, you can use this command:
+
+`docker run -p 3000:3000`
+
 # challenges faced 
 
 ``New to Docker , facing chanllenges while connecting local Mysql server with Docker 
