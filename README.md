@@ -9,11 +9,11 @@ This is a Booking Service which allows you to choose seats and book
 
 # Steps to set up this application in ur Docker 
 1. `git pull (github url)`
-   Open the file in terminal.
+   Open the file in the  terminal.
 
 2. Update the MySQL credentials in `config/config.json` (in development only).
 
-3.start local Mysql Server ,Create a data base using this command  `CREATE DATABASE bookingservice`
+   3 .start local Mysql Serve ,Create a data base using this command  `CREATE DATABASE bookingservice`
 
 4. Use the command: 
 
