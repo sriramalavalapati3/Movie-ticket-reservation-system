@@ -19,7 +19,7 @@ This is a Booking Service which allows you to choose seats and book
 
 4. Use the command: 
 
-`docker-compose up --build`
+`docker-compose up --build  <DOCKER IMAGE ID> `
 
 5. It will create a Docker image and run it automatically.
 
