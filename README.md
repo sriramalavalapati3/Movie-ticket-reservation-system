@@ -7,7 +7,7 @@ This is a Booking Service which allows you to choose seats and book
 # Tech Stack used 
 ``MySql , Express.js , Nodejs , Sequilze , Sequilize-cli ``
 
-# Steps to set up this application in ur Docker 
+# Steps to set up this application in your Docker 
 `note: please,Follow the steps exactly ` 
 
 
