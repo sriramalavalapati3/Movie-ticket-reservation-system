@@ -15,15 +15,15 @@ This is a Booking Service which allows you to choose seats and book
  
  `git pull (github url)`
 
-Open the file in the  terminal.
-
 2. Update the MySQL credentials in `config/config.json` (in development only).
 
 3 .start local Mysql Server ,Create a database using this command 
 
  `CREATE DATABASE bookingservice`
 
-4. Use the command: 
+ Open the file in the  terminal
+
+4. Use the below command in terminal: 
 
 `docker-compose up --build`
 
