@@ -19,13 +19,13 @@ This is a Booking Service which allows you to choose seats and book
 
 4. Use the command: 
 
-`docker-compose up --build  <DOCKER IMAGE ID> `
+`docker-compose up --build`
 
 5. It will create a Docker image and run it automatically.
 
 6. If you stop the application and want to use it again, you can use this command:
 
-`docker run -p 3000:3000`
+`docker run -p 3000:3000 <DOCKER IMAGE ID>`
 
 7. Export .csv data to Mysql databases 
 
