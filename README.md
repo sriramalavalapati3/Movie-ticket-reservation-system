@@ -1,4 +1,5 @@
-# Flurn_assignment
+# Movie-ticket-reservation-system
+
 This is a Booking Service which allows you to choose seats and book
 
 # These are routes created , documented using postman
